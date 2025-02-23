@@ -1,0 +1,128 @@
+/**
+ * ROFI Color Theme: Dracula Edition
+ * User: r4ppz
+ * Copyright: r4ppz !!
+ */
+* {
+    background: #282a36; /* Dracula Background */
+    foreground: #f8f8f2; /* Dracula Foreground */
+    selection: #44475a;  /* Dracula Selection */
+    pink: #ff79c6;
+    purple: #bd93f9;
+    cyan: #8be9fd;
+    green: #50fa7b;
+    yellow: #f1fa8c;
+    orange: #ffb86c;
+    red: #ff5555;
+    transparent: #00000000;
+    highlight: underline bold #ff79c6; /* Pink Highlight */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    spacing: 0;
+    vertical-align: 0.5;
+    text-color: @foreground;
+    border-color: @purple;
+    background-color: @transparent;
+    font: "Roboto Condensed Bold 12";
+}
+
+configuration {
+    display-drun: " App: ";
+    display-run: " Commands: ";
+    display-window: " Windows : ";
+}
+
+window {
+    width: 25%;
+    location: center;
+    background-color: @background;
+    orientation: horizontal;
+}
+
+mainbox {
+    padding: 6px;
+    margin: 8px;
+    border: 2px;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    margin: 8px;
+    border: 2px;
+    background-color: @purple;
+    children: [prompt, entry];
+}
+
+prompt {
+    padding: 5px;
+    margin: 2px;
+    background-color: @background;
+    text-color: @cyan;
+    font: "Roboto Condensed Bold 13";
+}
+
+entry {
+    padding: 5px;
+    margin: 2px;
+    border-color: @selection;
+    background-color: @background;
+    text-color: @red;
+    font: "Roboto Condensed Bold 13";
+}
+
+listview {
+    lines: 8;
+    padding: 5px;
+    margin: 5px;
+    background-color: @background;
+    children: [element];
+}
+
+element {
+    padding: 5px;
+}
+
+element-text {
+    size: 1em;
+    padding: 4px;
+    margin: 0px;
+    text-color: inherit;
+}
+
+element-icon {
+    padding: 4px;
+    margin: 1px;
+    size: 1em;
+}
+
+element selected {
+    background-color: @purple;
+    text-color: @foreground;
+}
+
+element selected active {
+    background-color: @red;
+}
+
+message {
+    expand: true;
+    background-color: @background;
+    children: [textbox];
+}
+
+textbox {
+    expand: true;
+    margin: 6px;
+    padding: 3px;
+    background-color: @red;
+    text-color: @background;
+}
+
+error-message {
+    expand: true;
+    border: 1px;
+    background-color: @background;
+    text-color: @foreground;
+}

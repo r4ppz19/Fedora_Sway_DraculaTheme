@@ -1,0 +1,72 @@
+/**
+ * Dracula Theme for Rofi
+ * Based on the official Dracula color palette
+ * https://draculatheme.com/
+ */
+
+* {
+    background:    #282a36;
+    foreground:    #f8f8f2;
+    selection:     #44475a;
+    selection-text:#50fa7b;
+    red:           #ff5555;
+    orange:        #ffb86c;
+    yellow:        #f1fa8c;
+    green:         #50fa7b;
+    blue:          #8be9fd;
+    purple:        #bd93f9;
+    pink:          #ff79c6;
+    cyan:          #8be9fd;
+    grey:          #6272a4;
+    transparent:   #00000000;
+    highlight:     underline bold @pink;
+
+    padding:       0;
+    margin:        0;
+    border:        0;
+    border-radius: 10px;
+    spacing:       0;
+
+    text-color: @foreground;
+
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    width: 40%;
+    location: center;
+    border-radius: 12px;
+    background-color: @background;
+    border: 2px solid @purple;
+    children: [listview];
+}
+
+listview {
+    border: 0px;
+    padding: 10px;
+    margin: 5px;
+    columns: 1;
+    lines: 10;
+    cycle: false;
+}
+
+element {
+    margin: 5px;
+    padding: 10px;
+    background-color: @selection;
+    border-radius: 5px;
+    text-color: @foreground;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+element selected {
+    background-color: @purple;
+    text-color: @selection-text;
+    border-radius: 5px;
+    border: 1px solid @pink;
+}
