@@ -10,14 +10,18 @@ gaps outer 10
 
 font pango:JetBrainsMono Nerd Font 9
 
-focus follows mouse yes
+focus_follows_mouse no
+mouse_warping none
 
 # Border
 default_border pixel 3px
+# smart_borders on
+# client.focused          #BD93F9 #FF79C6 #F8F8F2 #282A36
 client.focused          #BD93F9 #BD93F9 #BD93F9 #282A36
 # client.focused_inactive #8BE9FD #8BE9FD #8BE9FD #282A36
-client.unfocused        #6272A4 #6272A4 #6272A4 #282A36
+# client.unfocused        #6272A4 #6272A4 #6272A4 #282A36
 client.urgent           #FFB86C #FFB86C #FFB86C #282A36
+
 for_window [class=".*"] opacity 0.97
 
 # Lock screen and wallpaper
