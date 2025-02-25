@@ -1,15 +1,46 @@
 if status is-interactive
     function mistral
-        ollama run mistral $argv
+        ollama run mistral $argv | tee output.md; glow output.md
     end
 
-    function llama
+    function llama3.1
         ollama run llama3.1:latest $argv | tee output.md; glow output.md
     end
 
-    function deepseek
-        ollama run deepseek-r1:14b $argv
+    function llama3.1V2
+        set history_file ~/ollamatemp/chat_history.md  # Persistent chat history
+        mkdir -p ~/ollamatemp
+
+        echo "**User:** $argv" >> $history_file  # Save user message
+        ollama run llama3.1:latest < $history_file | tee -a $history_file | glow -
     end
+
+    function vwatch
+        while inotifywait -e modify $argv
+            clear
+            glow $argv
+        end
+    end
+
+
+
+
+    function deepseek:14b
+        ollama run deepseek-r1:14b $argv | tee output.md; glow output.md
+    end
+
+    function deepseek:7b
+        ollama run deepseek-r1:latest $argv | tee output.md; glow output.md
+    end
+
+    function qwen2.5-coder
+        ollama run qwen2.5-coder:latest $argv | tee output.md; glow output.md
+    end
+
+    function phi4
+        ollama run phi4:latest $argv | tee output.md; glow output.md
+    end
+
 
     function fish_greeting
         set quotes (
