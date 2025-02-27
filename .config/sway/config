@@ -11,7 +11,7 @@ gaps outer 10
 font pango:JetBrainsMono Nerd Font 9
 
 focus_follows_mouse no
-mouse_warping none
+mouse_warping output
 
 # Border
 default_border pixel 3px
