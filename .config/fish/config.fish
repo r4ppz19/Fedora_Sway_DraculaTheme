@@ -1,3 +1,10 @@
+# Set
+set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+
+# alias
+alias ls="eza --icons --group-directories-first"
+
+# Fuctions
 if status is-interactive
     function mistral
         ollama run mistral $argv | tee output.md; glow output.md
@@ -21,8 +28,6 @@ if status is-interactive
             glow $argv
         end
     end
-
-
 
 
     function deepseek:14b
@@ -140,4 +145,3 @@ if status is-interactive
     end    
 end
 
-set -U fish_user_paths $HOME/.local/bin $fish_user_paths
