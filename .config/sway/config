@@ -4,6 +4,35 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# ==== Cursor Movement ====
+bindsym KP_8 seat seat0 cursor move 0 -20   # Numpad 8 → Up
+bindsym KP_2 seat seat0 cursor move 0 20    # Numpad 2 → Down
+bindsym KP_4 seat seat0 cursor move -20 0   # Numpad 4 → Left
+bindsym KP_6 seat seat0 cursor move 20 0    # Numpad 6 → Right
+
+# ==== Clicks ====
+bindsym KP_5 seat seat0 cursor press button1    # Numpad 5 → Left Click
+bindsym --release KP_5 seat seat0 cursor release button1
+
+bindsym KP_0 seat seat0 cursor press button3    # Numpad 0 → Right Click
+bindsym --release KP_0 seat seat0 cursor release button3
+
+bindsym KP_Delete seat seat0 cursor press button2    # Numpad . → Middle Click
+bindsym --release KP_Delete seat seat0 cursor release button2
+
+# ==== Scrolling ====
+bindsym KP_9 seat seat0 scroll 0 20     # Numpad 9 → Scroll Up
+bindsym KP_3 seat seat0 scroll 0 -20    # Numpad 3 → Scroll Down
+bindsym KP_7 seat seat0 scroll -20 0    # Numpad 7 → Scroll Left
+bindsym KP_1 seat seat0 scroll 20 0     # Numpad 1 → Scroll Right
+
+# ==== NumLock & Key Repeat ====
+input "type:keyboard" {
+    xkb_numlock enable
+    repeat_delay 200
+    repeat_rate 30
+}
+
 # Set gaps between windows
 gaps inner 10
 gaps outer 10
