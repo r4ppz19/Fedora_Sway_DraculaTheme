@@ -29,8 +29,9 @@ bindsym --release KP_Delete seat seat0 cursor release button2
 # Window gaps and styling
 gaps inner 10
 gaps outer 10
-font pango:JetBrainsMono Nerd Font 9
+font pango:JetBrainsMono Nerd Font 8
 default_border pixel 3px
+output * scale 1
 
 # Window colors and behavior
 client.focused          #BD93F9 #BD93F9 #BD93F9 #282A36
@@ -75,7 +76,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Are you fucking sure?' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Window navigation
 bindsym $mod+$left focus left
