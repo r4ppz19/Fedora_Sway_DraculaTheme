@@ -1,140 +1,203 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
 * {
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
-    /* font-family: FiraMono Nerd Font; */
-    font-size: 8px;
-}
-
-window#waybar {
-    background: rgba(40, 42, 54, 0.9);
-    border-bottom: 2px solid #44475a;
-    background: rgba(40, 42, 54, 0.7);
-    color: #f8f8f2;
-    transition: background-color 0.5s ease-in-out;
-}
-
-button {
-    box-shadow: inset 0 -3px transparent;
+    /* `otf-font-awesome` is required to be installed for icons */
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    border-radius: 0;
     border: none;
-    border-radius: 5px;
-    padding: 0px 8px;
-}
-
-button:hover {
-    background: #44475a;
-    box-shadow: inset 0 -3px #bd93f9;
-}
-
-#workspaces button {
-    padding: 0px 8px;
-    background-color: transparent;
-    color: #f8f8f2;
-}
-
-#workspaces button.focused {
-    background-color: #bd93f9;
-    color: #282a36;
-}
-
-#workspaces button.urgent {
-    background-color: #ff5555;
-    color: #f8f8f2;
-}
-
-#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight,
-#network, #pulseaudio, #wireplumber, #custom-media, #tray,
-#mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
-    color: #f8f8f2;
-    background-color: #44475a;
-    border-radius: 5px;
-    
-    margin: 3;
-    padding: 0px 9px;
-}
-
-/* Individual Module Colors */
-#clock {
-    background-color: #8be9fd;
-    color: #282a36;
-}
-
-#battery {
-    background-color: #50fa7b;
-    color: #282a36;
-}
-
-#battery.charging, #battery.plugged {
-    background-color: #69ff94;
-    color: #282a36;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ff5555;
-        color: #f8f8f2;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #ff5555;
-    color: #f8f8f2;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#cpu {
-    background-color: #ffb86c;
-    color: #282a36;
-}
-
-#memory {
-    background-color: #8be9fd;
-    color: #282a36;
-}
-
-#disk {
-    background-color: #ff79c6;
-    color: #282a36;
-}
-
-#backlight {
-    background-color: #f1fa8c;
-    color: #282a36;
-}
-
-#network {
-    background-color: #50fa7b;
-    color: #282a36;
-}
-
-#network.disconnected {
-    background-color: #ff5555;
-    color: #f8f8f2;
-}
-
-#pulseaudio {
-    background-color: #bd93f9;
-    color: #282a36;
-}
-
-#pulseaudio.muted {
-    background-color: #44475a;
-    color: #f8f8f2;
-}
-
-#temperature {
-    background-color: #ffb86c;
-    color: #282a36;
-}
-
-#temperature.critical {
-    background-color: #ff5555;
-    color: #f8f8f2;
-}
-
-#tray {
-    background-color: #44475a;
-    color: #f8f8f2;
-}
+    text-shadow: none;
+    transition: none;
+    box-shadow: none;
+  }
+  
+  /* the whole window */
+  window#waybar {
+    color: #fff4d2;
+    background: none;
+  }
+  
+  window#waybar.hidden {
+    opacity: 1;
+  }
+  
+  #custom-rofi,
+  #workspaces button,
+  #workspaces button:hover,
+  #workspaces button.visible,
+  #workspaces button.visible:hover,
+  #workspaces button.active,
+  #workspaces button.active:hover,
+  #workspaces button.urgent,
+  #window,
+  #tray,
+  #disk,
+  #cpu,
+  #temperature,
+  #temperature.critical,
+  #backlight,
+  #custom-memory,
+  #pulseaudio,
+  #pulseaudio.muted,
+  #battery,
+  #battery.critical,
+  #battery.warning,
+  #clock {
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-size: 10px;
+    font-weight: 800;
+    color: #202020;
+    background: #202020;
+    border: 3px solid #202020;
+    border-radius: 3px;
+  }
+  
+  #window,
+  #tray,
+  #disk,
+  #cpu,
+  #temperature,
+  #temperature.critical,
+  #backlight,
+  #custom-memory,
+  #pulseaudio,
+  #pulseaudio.muted,
+  #battery,
+  #battery.critical,
+  #battery.warning,
+  #clock {
+    padding-right: 4px;
+  }
+  
+  #custom-rofi {
+    background: #83a598;
+    padding: 0 6px;
+  }
+  
+  /* ================================ */
+  /*       workspaces module          */
+  /* ================================ */
+  #workspaces {
+    margin: 0px;
+  }
+  
+  #workspaces button {
+    color: #fff4d2;
+    padding: 0 4px;
+    margin: 0px 3px;
+    min-width: 25px;
+  }
+  
+  #workspaces button:hover {
+    background: #d3869b;
+  }
+  
+  #workspaces button.visible {
+    background: #8ec07c;
+  }
+  
+  #workspaces button.visible:hover {
+    background: #8ec07c;
+  }
+  
+  #workspaces button.active {
+    background: #8ec07c;
+  }
+  
+  #workspaces button.active:hover {
+    background: #8ec07c;
+  }
+  
+  #workspaces button.urgent {
+    background: #ea6962;
+  }
+  
+  /* ================================ */
+  /*            window                 */
+  /* ================================ */
+  
+  #window {
+    color: #d3869b;
+  }
+  
+  /* ================================ */
+  /*            tray                 */
+  /* ================================ */
+  
+  #tray {
+    padding: 0 6px 0 6px;
+  }
+  
+  /* ================================ */
+  /*            disk                 */
+  /* ================================ */
+  
+  #disk {
+    color: #ea6962;
+  }
+  
+  /* ================================ */
+  /*            cpu                  */
+  /* ================================ */
+  #cpu {
+    color: #e78a4e;
+  }
+  
+  /* ================================ */
+  /*            temp                  */
+  /* ================================ */
+  #temperature {
+    color: #d8a657;
+  }
+  
+  #temperature.critical {
+    color: #cc241d;
+  }
+  
+  /* ================================ */
+  /*            backlight             */
+  /* ================================ */
+  #backlight {
+    color: #f6c657;
+  }
+  
+  /* ================================ */
+  /*            memory                */
+  /* ================================ */
+  #custom-memory {
+    color: #458588;
+  }
+  
+  /* ================================ */
+  /*         pulseaudio               */
+  /* ================================ */
+  #pulseaudio {
+    color: #83a598;
+  }
+  
+  #pulseaudio.muted {
+    color: #ea6962;
+  }
+  
+  /* ================================ */
+  /*            battery               */
+  /* ================================ */
+  #battery {
+    color: #689d6a;
+  }
+  
+  #battery.critical {
+    color: #cc241d;
+  }
+  
+  #battery.warning {
+    color: #e78a4e;
+  }
+  /* ================================ */
+  /*            clock                 */
+  /* ================================ */
+  #clock {
+    color: #8ec07c;
+  }
