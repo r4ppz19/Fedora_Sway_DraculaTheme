@@ -15,8 +15,8 @@
   
   /* the whole window */
   window#waybar {
-    color: #fff4d2;
-    background: none;
+    color: #f8f8f2;
+    /* background: none; */
   }
   
   window#waybar.hidden {
@@ -46,11 +46,11 @@
   #battery.warning,
   #clock {
     font-family: JetBrainsMono Nerd Font Propo;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
-    color: #202020;
-    background: #202020;
-    border: 3px solid #202020;
+    color: #282a36;
+    background: #282a36;
+    border: 3px solid #282a36;
     border-radius: 3px;
   }
   
