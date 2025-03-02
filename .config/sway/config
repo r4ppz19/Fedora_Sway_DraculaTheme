@@ -17,7 +17,7 @@ client.urgent                $color2           $color2         $color1          
 default_border pixel 3px
 for_window [class=".*"] opacity 0.97
 
-gaps inner 10
+gaps inner 12
 gaps outer 0
 
 # ===Lock screen and wallpaper===
