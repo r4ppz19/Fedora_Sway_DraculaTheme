@@ -23,6 +23,8 @@ window#waybar.hidden {
   opacity: 1;
 }
 
+#power-profiles-daemon,
+#custom-power-button,
 #custom-rofi,
 #workspaces button,
 #workspaces button:hover,
@@ -54,6 +56,8 @@ window#waybar.hidden {
   border-radius: 3px;
 }
 
+#power-profiles-daemon,
+#custom-power-button,
 #window,
 #tray,
 #disk,
@@ -207,26 +211,12 @@ window#waybar.hidden {
 /*        power-profiles-daemon     */
 /* ================================ */
 #power-profiles-daemon {
-  font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 9px;
-  font-weight: 800;
   color: #d3869b;
-  background: #282a36;
-  border: 3px solid #282a36;
-  border-radius: 3px;
-  padding-right: 4px;
 }
 
 /* ================================ */
 /*        power-button              */
 /* ================================ */
 #custom-power-button {
-  font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 9px;
-  font-weight: 800;
   color: #cc241d;
-  background: #282a36;
-  border: 3px solid #282a36;
-  border-radius: 3px;
-  padding-right: 4px;
 }
