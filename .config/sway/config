@@ -34,6 +34,10 @@ exec_always gsettings set org.gnome.desktop.interface cursor-theme Hackneyed-24p
 exec_always export QT_QPA_PLATFORMTHEME=qt5ct
 exec_always export QT_QPA_PLATFORM=wayland
 
+exec_always gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+exec_always gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+
+
 ### ===Variables===
 set $mod Mod4
 set $left h
