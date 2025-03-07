@@ -5,10 +5,10 @@ set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 alias ls="eza --icons --group-directories-first"
 
 # Environment Variable
-export QT_QPA_PLATFORMTHEME=qt5ct
+set -Ux QT_QPA_PLATFORMTHEME kvantum
 
 # Fuctions
 if status is-interactive
-    function fish_greeting 
+    function fish_greeting
     end
 end
