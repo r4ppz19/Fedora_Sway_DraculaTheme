@@ -15,7 +15,7 @@ client.focused_inactive      $color2           $color1         $color2          
 client.urgent                $color2           $color2         $color1           $color2         $color1
 
 default_border pixel 3px
-for_window [class=".*"] opacity 0.97
+for_window [class=".*"] opacity 0.95
 
 gaps inner 12
 gaps outer 0
@@ -33,10 +33,6 @@ mouse_warping none
 exec_always gsettings set org.gnome.desktop.interface cursor-theme Hackneyed-24px
 exec_always export QT_QPA_PLATFORMTHEME=qt5ct
 exec_always export QT_QPA_PLATFORM=wayland
-
-exec_always gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
-exec_always gsettings set org.gnome.desktop.interface icon-theme "Dracula"
-
 
 ### ===Variables===
 set $mod Mod4
