@@ -46,7 +46,8 @@ window#waybar.hidden {
 #battery,
 #battery.critical,
 #battery.warning,
-#clock {
+#clock,
+#custom-web-links {
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 9px;
   font-weight: 800;
@@ -71,7 +72,8 @@ window#waybar.hidden {
 #battery,
 #battery.critical,
 #battery.warning,
-#clock {
+#clock,
+#custom-web-links {
   padding-right: 4px;
 }
 
@@ -219,4 +221,11 @@ window#waybar.hidden {
 /* ================================ */
 #custom-power-button {
   color: #cc241d;
+}
+
+/* ================================ */
+/*        web-links                 */
+/* ================================ */
+#custom-web-links {
+  color: #83a598;
 }

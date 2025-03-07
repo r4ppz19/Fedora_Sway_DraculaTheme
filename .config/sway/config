@@ -55,6 +55,7 @@ bindsym $mod+d exec $menu
 bindsym $mod+Shift+e exec "powermenu_t2"
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
+bindsym Mod4+q exec ~/.config/rofi/applets/bin/quicklinks.sh
 
 # ===Moving around===
 bindsym $mod+$left focus left

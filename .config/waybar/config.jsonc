@@ -10,6 +10,7 @@
     "sway/workspaces",
     "sway/window",
     "hyprland/workspaces",
+    "custom/web-links",
     "tray",
     "hyprland/window",
     "power-profiles-daemon",
@@ -177,5 +178,10 @@
     "on-click": "powermenu_t2",
     
     "tooltip": false
-  }
+  },
+  "custom/web-links": {
+    "format": "<span color='#202020' bgcolor='#83a598' >  </span>",
+    "on-click": "~/.config/rofi/applets/bin/quicklinks.sh",
+    "tooltip": false
+  },
 }
