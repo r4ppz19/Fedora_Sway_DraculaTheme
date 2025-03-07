@@ -29,8 +29,8 @@
   ],
   "custom/rofi": {
     "format": "<span ></span>",
-    "on-click": "rofi -show drun -theme ~/.config/rofi/launchers/type-4/style-1.rasi",
-    "on-click-right": "~/.config/rofi/powermenu/type-2/powermenu.sh",
+    "on-click": "launcher_t4",
+    "on-click-right": "powermenu_t2",
     "escape": true,
     "tooltip": false
   },
@@ -174,7 +174,7 @@
   },
   "custom/power-button": {
     "format": "<span color='#202020' bgcolor='#cc241d' >  </span>",
-    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh",
+    "on-click": "powermenu_t2",
     
     "tooltip": false
   }

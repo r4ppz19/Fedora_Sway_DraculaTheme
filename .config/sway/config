@@ -36,8 +36,7 @@ set $down j
 set $up k
 set $right l
 set $term kitty
-set $rofi_theme "~/.config/rofi/launchers/type-4/style-1.rasi" # Rofi Theme
-set $menu rofi -show drun -theme $rofi_theme
+set $menu "launcher_t4"
 
 ### ===Output configuration===
 output * bg /home/r4ppz/Documents/Wallpaper/wallhaven5.png fill
@@ -53,7 +52,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 # Rofi PowerMenu
-bindsym $mod+Shift+e exec "~/.config/rofi/powermenu/type-2/powermenu.sh"
+bindsym $mod+Shift+e exec "powermenu_t2"
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
