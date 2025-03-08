@@ -3,7 +3,7 @@ fish_add_path -U --append $HOME/.local/bin
 fish_add_path -U --append $HOME/.config/rofi/scripts
 
 # alias
-alias ls="eza --icons --group-directories-first --color=auto --long"
+alias ls="eza --icons --group-directories-first --color=auto"
 
 # Environment Variable
 set -Ux QT_QPA_PLATFORMTHEME kvantum
