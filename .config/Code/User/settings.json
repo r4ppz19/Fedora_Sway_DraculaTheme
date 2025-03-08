@@ -55,8 +55,7 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.startupEditor": "none",
     "workbench.list.smoothScrolling": false,
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.location": "hidden",
+    "workbench.activityBar.location": "bottom",
     "workbench.layoutControl.enabled": false,
 
     // TERMINAL
@@ -186,4 +185,5 @@
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
+    "workbench.statusBar.visible": false,
 }

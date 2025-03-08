@@ -6,7 +6,7 @@ fish_add_path -U --append $HOME/.config/rofi/scripts
 alias ls="eza --icons --group-directories-first --color=auto"
 
 # Environment Variable
-set -Ux QT_QPA_PLATFORMTHEME kvantum
+set -x QT_QPA_PLATFORMTHEME qt5ct  # Set the correct value
 
 # Fuctions
 if status is-interactive
