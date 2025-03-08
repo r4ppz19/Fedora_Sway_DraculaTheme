@@ -1,5 +1,7 @@
 My Fedora Sway setup
 
+Theme: Dracula
+
 ![alt text](Pictures/fedora-screenshots/2025-03-08T19:23:19,714985474+08:00.png)
 
 ![alt text](Pictures/fedora-screenshots/2025-03-08T19:42:04,517503045+08:00.png)
