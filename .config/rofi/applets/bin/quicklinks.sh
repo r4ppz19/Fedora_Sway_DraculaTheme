@@ -5,15 +5,13 @@
 #
 ## Applets : Quick Links
 
-BROWSER=brave
-
 # Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
 # Theme Elements
-prompt='FUCK NO!'
-mesg="Using '$BROWSER' as web browser"
+prompt='Artificial Intelligence'
+mesg="The best LLM's"
 
 if [[ ( "$theme" == *'type-1'* ) || ( "$theme" == *'type-3'* ) || ( "$theme" == *'type-5'* ) ]]; then
     list_col='1'
@@ -32,23 +30,23 @@ fi
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
-    option_1="🤖 ChatGPT"
-    option_2="🧠 DeepSeek"
-    option_3="🔍 Qwen"
-    option_4=" Facebook"
-    option_5=" GitHub"
+    option_1="  ChatGPT"
+    option_2="󱚝  DeepSeek"
+    option_3="󰚩  Qwen"
+    option_4="󱚣  Kimi"
+    option_5="󱚥  Perplexity"
 else
-    option_1="🤖"
-    option_2="🧠"
-    option_3="🔍"
-    option_4=""
-    option_5=""
+    option_1=" "
+    option_2="󱚝 "
+    option_3="󰚩 "
+    option_4="󱚣"
+    option_5="󱚥"
 fi
 
 # Rofi CMD
 rofi_cmd() {
     rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
-        -theme-str 'textbox-prompt-colon {str: "";}' \
+        -theme-str 'textbox-prompt-colon {str: " ";}' \
         -theme-str "element-text {font: \"$efonts\";}" \
         -dmenu \
         -p "$prompt" \
@@ -71,9 +69,9 @@ run_cmd() {
     elif [[ "$1" == '--opt3' ]]; then
         xdg-open 'https://chat.qwen.ai/'
     elif [[ "$1" == '--opt4' ]]; then
-        xdg-open 'https://www.facebook.com/'
+        xdg-open 'https://kimi.ai/'
     elif [[ "$1" == '--opt5' ]]; then
-        xdg-open 'https://github.com/r4ppz19'
+        xdg-open 'https://www.perplexity.ai/'
     fi
 }
 
