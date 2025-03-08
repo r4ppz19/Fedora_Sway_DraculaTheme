@@ -14,8 +14,6 @@ Theme: Dracula
 
 ![alt text](Pictures/fedora-screenshots/2025-03-08T20:07:08,713499083+08:00.png)
 
-![alt text](Pictures/fedora-screenshots/2025-03-08T20:06:24,093043388+08:00.png)
-
 ![alt text](Pictures/fedora-screenshots/2025-03-08T19:29:01,108029155+08:00.png)
 
 ![alt text](Pictures/fedora-screenshots/2025-03-08T19:29:13,905998620+08:00.png)
