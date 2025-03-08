@@ -19,22 +19,15 @@
     "clock"
   ],
   "modules-right": [
-    "disk",
+    "memory",
     "cpu",
     "temperature",
+    "disk",
     "backlight",
-    "custom/memory",
     "pulseaudio",
     "battery",
     "custom/power-button",
   ],
-  "custom/rofi": {
-    "format": "<span ></span>",
-    "on-click": "launcher_t4",
-    "on-click-right": "powermenu_t2",
-    "escape": true,
-    "tooltip": false
-  },
   // Modules configuration
   "sway/workspaces": {
     "disable-scroll": true,
@@ -91,7 +84,13 @@
   "cpu": {
     "format": "<span color='#202020' bgcolor='#e78a4e' >  </span> {usage}%",
     "tooltip": false,
-    "interval": 1
+    "interval": 1,
+  },
+  "memory": {
+    "format": "<span color='#202020' bgcolor='#b8bb26' >  </span> {used} GiB",
+    "tooltip": false,
+    "interval": 10,
+    "on-click-right": "kitty -e btop"
   },
   "temperature": {
     "tooltip": false,
@@ -106,13 +105,7 @@
     "format": "<span color='#202020' bgcolor='#f6c657' > 󰞏 </span> {percent}%",
     "tooltip": false
   },
-  "custom/memory": {
-    "exec": "~/.config/custom_scripts/memory_usage.sh",
-    "interval": 2,
-    "return-type": "json",
-    "format": "<span color='#202020' bgcolor='#458588' >  </span> {}"
-  },
-  "pulseaudio": {
+    "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "<span color='#202020' bgcolor='#83a598' >  </span> {volume}%",
     "format-muted": "<span color='#202020' bgcolor='#ea6962' >  </span> {volume}%",
@@ -173,15 +166,21 @@
       "power-saver": ""
     }
   },
+  "custom/rofi": {
+    "format": "<span ></span>",
+    "on-click": "launcher_t4",
+    "on-click-right": "powermenu_t2",
+    "escape": true,
+    "tooltip": false
+  },
   "custom/power-button": {
     "format": "<span color='#202020' bgcolor='#cc241d' >  </span>",
     "on-click": "powermenu_t2",
-    
     "tooltip": false
   },
   "custom/web-links": {
-    "format": "<span color='#202020' bgcolor='#83a598' >  </span>",
-    "on-click": "~/.config/rofi/applets/bin/quicklinks.sh",
+    "format": "<span color='#202020' bgcolor='#83a598' >  </span>",
+    "on-click": "~/.config/rofi/applets/bin/quicklinksalse",
     "tooltip": false
   },
 }
