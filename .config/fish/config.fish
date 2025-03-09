@@ -2,11 +2,14 @@
 fish_add_path -U --append $HOME/.local/bin
 fish_add_path -U --append $HOME/.config/rofi/scripts
 
+# Initialize
+zoxide init fish | source
+
 # alias
 alias ls="eza --icons --group-directories-first --color=auto"
 
 # Environment Variable
-set -x QT_QPA_PLATFORMTHEME qt5ct  # Set the correct value
+set -x QT_QPA_PLATFORMTHEME qt
 
 # Fuctions
 if status is-interactive
@@ -14,3 +17,4 @@ if status is-interactive
         # Leave empty to disable Fish greeting message
     end
 end
+
