@@ -3,21 +3,26 @@ font pango:JetBrainsMono Nerd Font 9
 
 # ===Border and windows===
 set $color1     #282a36
-set $color2     #bd93f9
+set $color2     #BD93F9
+
 client.focused               $color2           $color2         $color1           $color2         $color2
 client.unfocused             $color2           $color1         $color2           $color1         $color1
 client.focused_inactive      $color2           $color1         $color2           $color1         $color1
 client.urgent                $color2           $color2         $color1           $color2         $color1
 
-default_border pixel 3px
-for_window [class=".*"] opacity 0.95
+default_border pixel 4px
+for_window [class=".*"] opacity 0.90
 
-gaps inner 12
-gaps outer 0
+gaps inner 10
+gaps outer 10
 
-# ===Lock screen and wallpaper===
-exec swaylock -f -c 282A36 --effect-blur 7x5 --indicator-radius 24 --indicator-thickness 4 --ring-color BD93F9 --key-hl-color F8F8F2
-exec swaybg -i /home/r4ppz/Documents/Wallpaper/wallhaven5.png -m fill
+# ===SwayLock===
+# exec swaylock -c ~/.config/swaylock/config
+
+# ===SwayNC===
+set $flavor macchiato
+set $version v0.2.0
+exec_always if [ ! -f ~/.config/swaync/style.css ]; then $(mkdir -p ~/.config/swaync && curl -L https://github.com/catppuccin/swaync/releases/download/$version/$flavor.css -o ~/.config/swaync/style.css); fi
 
 # ===Cursor and mouse===
 seat * xcursor_theme Hackneyed-24px
@@ -39,23 +44,30 @@ set $term kitty
 set $menu "launcher_t4"
 
 ### ===Output configuration===
-output * bg /home/r4ppz/Documents/Wallpaper/wallhaven5.png fill
+output * bg /home/r4ppz/Pictures/Wallpaper/wallpaper7.png fill
 
 ### ===Idle configuration==-
-exec swayidle -w \
-  timeout 300 'swaylock -f --effect-blur 7x5 --clock --indicator' \
-  timeout 600 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"'
+# exec swayidle -w \
+#   timeout 300 'swaylock -f --effect-blur 7x5 --clock --indicator' \
+#   timeout 600 'swaymsg "output * dpms off"' \
+#   resume 'swaymsg "output * dpms on"'
 
 ### ===Key bindings==-
+bindsym $mod+n exec swaync-client --toggle-panel
+
+bindsym $mod+KP_1 exec "brave-browser"
+bindsym $mod+KP_2 exec "thunar"
+
+# Rofi PowerMenu
+bindsym $mod+Shift+e exec "powermenu_t1"
+bindsym Mod4+q exec ~/.config/rofi/applets/bin/quicklinks.sh
+
+# Defaults
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
-# Rofi PowerMenu
-bindsym $mod+Shift+e exec "powermenu_t2"
-floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym Mod4+q exec ~/.config/rofi/applets/bin/quicklinks.sh
+floating_modifier $mod normal
 
 # ===Moving around===
 bindsym $mod+$left focus left
