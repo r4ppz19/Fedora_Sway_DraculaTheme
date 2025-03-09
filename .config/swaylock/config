@@ -1,16 +1,30 @@
 color=282a36
 font=monospace
-image=/home/r4ppz/Documents/Wallpaper/wallhaven5.png
+image=/home/r4ppz/Pictures/Wallpaper/wallpaper7.png
 
 indicator-idle-visible
 indicator-radius=100
 indicator-thickness=10
 
 inside-color=282a36
-ring-color=6272a4
+inside-clear-color=282a36
+inside-ver-color=282a36
+inside-wrong-color=282a36
+
+ring-color=bd93f9
+ring-clear-color=bd93f9
+ring-ver-color=50fa7b
+ring-wrong-color=ff5555
+
 key-hl-color=50fa7b
 separator-color=44475a
 
 text-color=f8f8f2
+text-clear-color=f8f8f2
+text-ver-color=f8f8f2
+text-wrong-color=f8f8f2
+text-caps-lock-color=f8f8f2
+
 bs-hl-color=ff5555
-caps-lock-color=ffb86c
+caps-lock-bs-hl-color=ff5555
+caps-lock-key-hl-color=ff5555
