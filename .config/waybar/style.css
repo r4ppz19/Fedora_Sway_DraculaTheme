@@ -16,7 +16,7 @@
 /* the whole window */
 window#waybar {
   color: #f8f8f2;
-  /* background: none; */
+  background: none;
 }
 
 window#waybar.hidden {
@@ -59,8 +59,6 @@ window#waybar.hidden {
   border-radius: 3px;
 }
 
-#power-profiles-daemon,
-#custom-power-button,
 #window,
 #tray,
 #disk,
@@ -75,7 +73,6 @@ window#waybar.hidden {
 #battery.critical,
 #battery.warning,
 #clock,
-#custom-web-links,
 #memory,
 #mpd {
   padding-right: 4px;
@@ -105,19 +102,26 @@ window#waybar.hidden {
 }
 
 #workspaces button.visible {
-  background: #8ec07c;
+  /* background: #8ec07c; */
+  background: #BD93F9;
 }
 
 #workspaces button.visible:hover {
-  background: #8ec07c;
+  /* background: #8ec07c; */
+  background: #BD93F9;
+
 }
 
 #workspaces button.active {
-  background: #8ec07c;
+  /* background: #8ec07c; */
+  background: #BD93F9;
+
 }
 
 #workspaces button.active:hover {
-  background: #8ec07c;
+  /* background: #8ec07c; */
+  background: #BD93F9;
+
 }
 
 #workspaces button.urgent {
@@ -221,6 +225,8 @@ window#waybar.hidden {
 /*        power-profiles-daemon     */
 /* ================================ */
 #power-profiles-daemon {
+  padding-left: 2;
+  padding-right: 2;
   color: #d3869b;
 }
 
