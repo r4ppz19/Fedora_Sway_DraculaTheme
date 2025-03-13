@@ -13,19 +13,17 @@ client.urgent                $color2           $color2         $color1          
 default_border pixel 4px
 for_window [class=".*"] opacity 0.90
 
-gaps inner 10
-gaps outer 10
+gaps inner 8
+gaps outer 8
+
+# ===AutoStart===
+exec swaync
 
 # ===SwayLock===
 # exec swaylock -c ~/.config/swaylock/config
 
-# ===SwayNC===
-set $flavor macchiato
-set $version v0.2.0
-exec_always if [ ! -f ~/.config/swaync/style.css ]; then $(mkdir -p ~/.config/swaync && curl -L https://github.com/catppuccin/swaync/releases/download/$version/$flavor.css -o ~/.config/swaync/style.css); fi
-
 # ===Cursor and mouse===
-seat * xcursor_theme Hackneyed-24px
+seat * xcursor_theme Hackneyed-24qpx
 focus_follows_mouse no
 mouse_warping none
 
@@ -41,7 +39,7 @@ set $down j
 set $up k
 set $right l
 set $term kitty
-set $menu "launcher_t4"
+set $menu "~/.config/rofi/scripts/launcher_t4"
 
 ### ===Output configuration===
 output * bg /home/r4ppz/Pictures/Wallpaper/wallpaper7.png fill
@@ -59,9 +57,11 @@ bindsym $mod+KP_1 exec "brave-browser"
 bindsym $mod+KP_2 exec "thunar"
 
 # Rofi PowerMenu
-bindsym $mod+Shift+e exec "powermenu_t1"
+bindsym $mod+Shift+e exec "~/.config/rofi/scripts/powermenu_t1"
 bindsym Mod4+q exec ~/.config/rofi/applets/bin/quicklinks.sh
 
+
+# ================================================================
 # Defaults
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
