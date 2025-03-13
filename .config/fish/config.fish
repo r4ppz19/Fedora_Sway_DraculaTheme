@@ -5,6 +5,10 @@ fish_add_path -U --append $HOME/.config/rofi/scripts
 # Initialize
 zoxide init fish | source
 
+# Default editor:
+set -Ux EDITOR code
+set -Ux VISUAL code
+
 # alias
 alias ls="eza --icons --group-directories-first --color=auto"
 
@@ -17,4 +21,3 @@ if status is-interactive
         # Leave empty to disable Fish greeting message
     end
 end
-
