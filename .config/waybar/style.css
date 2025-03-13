@@ -16,7 +16,8 @@
 /* the whole window */
 window#waybar {
   color: #f8f8f2;
-  background: none;
+  /* background: none; */
+  background: rgba(40, 42, 54, 0.90); 
 }
 
 window#waybar.hidden {
@@ -51,7 +52,7 @@ window#waybar.hidden {
 #memory,
 #mpd {
   font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   color: #282a36;
   background: #282a36;

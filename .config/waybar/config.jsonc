@@ -176,13 +176,13 @@
   "custom/rofi": {
     "format": "<span ></span>",
     "on-click": "launcher_t4", // Rofi
-    "on-click-right": "powermenu_t1", // Rofi
+    "on-click-right": "~/.config/rofi/scripts/powermenu_t1", // Rofi
     "escape": true,
     "tooltip": false
   },
   "custom/power-button": {
     "format": "<span color='#202020' bgcolor='#cc241d' >  </span>",
-    "on-click": "powermenu_t1", // Rofi
+    "on-click": "~/.config/rofi/scripts/powermenu_t1", // Rofi
     "tooltip": false
   },
   "custom/web-links": {
