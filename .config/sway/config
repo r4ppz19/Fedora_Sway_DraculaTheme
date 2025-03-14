@@ -1,5 +1,30 @@
+### Modern Minimalist Look for SwayFX
+
+## Window Blur (Subtle but noticeable)
+blur enable
+blur_passes 2
+blur_radius 4
+blur_xray enable
+
+## Window Shadows (Minimal but effective)
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius 15
+shadow_color #00000066 
+shadow_inactive_color #00000033  
+
+## LayerShell Effects (Waybar & Other Panels)
+layer_effects "waybar" "blur enable"; shadows enable
+layer_effects "rofi" "blur enable"; shadows enable
+layer_effects "swaync" "blur enable"; shadows enable
+
+## Dim Unfocused Windows (Subtle Effect)
+default_dim_inactive 0.03
+dim_inactive_colors.unfocused #00000044
+dim_inactive_colors.urgent #ff555588 
+
 # ===Font===
-font pango:JetBrainsMono Nerd Font 9
+font pango:JetBrainsMono Nerd Font Medium 8
 
 # ===Border and windows===
 set $color1     #282a36
@@ -10,25 +35,24 @@ client.unfocused             $color2           $color1         $color2          
 client.focused_inactive      $color2           $color1         $color2           $color1         $color1
 client.urgent                $color2           $color2         $color1           $color2         $color1
 
-default_border pixel 4px
+default_border pixel 2px
 for_window [class=".*"] opacity 0.90
 
-gaps inner 8
-gaps outer 8
+gaps inner 10
+gaps outer 5
 
 # ===AutoStart===
 exec swaync
+exec gammastep -c ~/.config/gammastep/config.ini
 
 # ===SwayLock===
 # exec swaylock -c ~/.config/swaylock/config
 
 # ===Cursor and mouse===
-seat * xcursor_theme Hackneyed-24qpx
 focus_follows_mouse no
 mouse_warping none
 
 # ===Theme===
-exec_always gsettings set org.gnome.desktop.interface cursor-theme Hackneyed-24px
 exec_always export QT_QPA_PLATFORMTHEME=qt5ct
 exec_always export QT_QPA_PLATFORM=wayland
 
@@ -60,9 +84,9 @@ bindsym $mod+KP_2 exec "thunar"
 bindsym $mod+Shift+e exec "~/.config/rofi/scripts/powermenu_t1"
 bindsym Mod4+q exec ~/.config/rofi/applets/bin/quicklinks.sh
 
-
-# ================================================================
+# ==========================================================================
 # Defaults
+# ==========================================================================
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
